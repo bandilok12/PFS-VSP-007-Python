@@ -1,3 +1,4 @@
+
 name = "B.Venkata Sai Lokesh"
 age = 22
 place = "Visakhapatnam"
@@ -58,5 +59,10 @@ discount=0.15
 final_price=price - (price*discount)
 print(final_price)
 
-
 #Vijay went to hotel for dinner his bill is 2500,GST applicable is 5%;hotel manager has given him 5% discount,how much Vijay has to pay?
+bill = 2500
+gst = 0.05
+discount = 0.05
+price = bill + (bill * gst)
+final_price = price - (price * discount)
+print(final_price)
