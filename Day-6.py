@@ -1,9 +1,9 @@
-'''
+
 Tokens,datatypes(Numeric,boolean,none type,sequences(str,lists,tuples,sets,
 frozensets mapping objects(dicts)) typecasting
 operators
-input Formatting/out Formatting
-'''
+input Formatting/output Formatting
+
 
 #Input foramting --->input()
 #Usage of input()
@@ -95,6 +95,28 @@ place = "Vizag"
 print("Age = %d | Price = %f | Place = %s"%(age,price,place))
 print("Price is %.f"%price) #in this case complete decimal part is wiped off
 print("Price is %.2f"%price) #rounding off to two decimals
+
+#3) Usage of String formatting --> str.format()
+name = "Codegnan";branch = "Vizag";age = 8
+print("{} is in {} and its of {} years in Edtech Industry".format(name,branch,age))
+
+a,b = 2,45
+print("{1},{0}".format(a,b))
+print("Value of a is {} and value of b is {}".format(a,b))
+
+#f-string notation --> Python 3.9+ versions
+print(f"{name} is in {branch}")
+#make sure to denote the variables only in curly braces
+print(f'Value of a is {a} and b is {b}')
+print(f'"Codegnan is in {branch} and of {age} years in Trainings"')
+
+
+
+
+
+
+
+
 
 
 
