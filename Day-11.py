@@ -130,6 +130,7 @@ details = {'ids':['CGVI0242','CGVI0249','CGVI0224','CGVI0240'],
            'batch':'PFS-VSP-007',
            'place':('Vizag','Vijaywada','Hyderabad','Bangalore'),
            'subjects':{'Python','Aptitude','Softskills'}}
+'''
 #print(details)
 #print(len(details))
 print(details.keys())
@@ -141,13 +142,24 @@ details['ids'].insert(3,"CGVI0247")
 print(details['ids'])
 print(details['ids'][:3])   #returns first three ids
 print(details['ids'][::2])
-'''
+
+    
 #Task : 1)Insert Raju at the end also Sanju and Nihanth at the end in names
              2)Update subjects with SQL,Flask,FastAPI
              3)Remove Bangalore and Vizag from place
              4)Convert batch number to lowercase
-
 '''
+details['names'].extend(["Raju","Sanju","Nihanth"])
+print(details['names'])
 
+details['subjects'].update({"SQL","Flask","FastAPI"})
+print(details['subjects'])
 
+a=sorted(details['place'])
+a.remove("Bangalore")
+a.remove("Vizag")
+details['place']=tuple(a)
+print(details['place'])
 
+details['batch']=details['batch'].lower()
+print(details['batch'])
