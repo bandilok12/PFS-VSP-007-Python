@@ -125,7 +125,6 @@ else:
     for i in range(1,n+1):
         total += i
     print(total)
-'''
 
 #Usecase : Checking daily workout app usage
 work_log = [1,1,1,0,1,1,0]
@@ -142,3 +141,20 @@ for day in work_log:
     else:
         current_streak = 0
 print(f'Longest Streak is {longest_streak}')
+'''
+#Task:use range function for the above problem
+work_log = [1,1,1,0,1,1,0]
+#Find the longest workout streak
+longest_streak=0
+current_streak=0
+for day in range(len(work_log)):
+    if work_log[day] == 1:
+        current_streak += 1
+        if current_streak > longest_streak:
+            longest_streak = current_streak
+    else:
+        current_streak = 0
+print(f'Longest Streak is {longest_streak}')
+
+
+
