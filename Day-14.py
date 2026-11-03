@@ -66,7 +66,7 @@ print(f'Average marks are :{total/len(marks)}')
 subject = input("Enter the subject:")
 for i in subject:
     print(i)
-'''
+
 details = {'ids':[121,123,125],
            'marks':[25,20,21]}
 for data in details:    #indexed through keys
@@ -80,3 +80,65 @@ for key,value in details.items():
 
 for data in details:
     print(details[data])    #it returns values
+
+#range(stop) --> takes by default minimum value as 0
+for i in range(5):
+    print(f'Value of i is {i}')
+    print(f'Square of i is {i**2}')
+
+#range(start,stop) --> u can mention start and stop positions(values)
+#start is included,end is excluded
+for i in range(1,11):
+    print(i,i**2)
+    print('<------->')
+
+#range(start,stop,step)
+for i in range(1,21,1):
+    print(i)
+
+for i in range(1,21,2):
+    print(i)
+
+#Get first 10 even numbers
+for i in range(2,21,2):
+    print(i)
+#print numbers from 10 to 1 in reverse order
+for i in range(10,0,-1):
+    print(i)
+#print 'A' to 'Z' in a single line
+for i in range(65,91):
+    print(chr(i),end=' ')
+
+names = ['Akash','Kaushik','Vijay','Sanjay','Lokesh']
+for name in names:
+    print(name,end=' ') #this returns horizontal order
+
+for i in range(len(names)):
+    print(names[i])
+
+#Ask input from user and get the sum of numbers as per input
+n = int(input("Enter a value:"))
+if n<0:
+    print("No Output")
+else:
+    total=0
+    for i in range(1,n+1):
+        total += i
+    print(total)
+'''
+
+#Usecase : Checking daily workout app usage
+work_log = [1,1,1,0,1,1,0]
+#1 --> workout done
+#0 --> workout missing
+#Find the longest workout streak
+longest_streak=0
+current_streak=0
+for day in work_log:
+    if day == 1:
+        current_streak += 1
+        if current_streak > longest_streak:
+            longest_streak = current_streak
+    else:
+        current_streak = 0
+print(f'Longest Streak is {longest_streak}')
