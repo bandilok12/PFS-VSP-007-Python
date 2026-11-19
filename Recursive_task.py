@@ -10,6 +10,7 @@ def game():
         n = input()
         if n == '1':
             def factorial(x):
+                """Factorial of a number"""
                 if x == 0 or x == 1:
                     return 1
                 elif x < 0:
@@ -20,6 +21,7 @@ def game():
             print(factorial(n))
         elif n == '2':
             def sum_of_natural(x):
+                """Sum of Natural numbers"""
                 if x == 0 or x == 1:
                     return 1
                 elif x<0:
@@ -30,6 +32,7 @@ def game():
             print(sum_of_natural(n))
         elif n == '3':
             def calculate_bmi(n):
+                """BMI Calculation"""
                 if n <= 0:
                     return
                 for i in range(n):
@@ -52,6 +55,7 @@ def game():
             calculate_bmi(total_users)
         elif n == '4':
             def fibonacci(n):
+                """Fibonacci series"""
                 if n <= 0:
                     return 0
                 elif n == 1:
@@ -65,6 +69,7 @@ def game():
         elif n == '5':
             balance = 5000
             def atm():
+                """ATM Usecase"""
                 nonlocal balance
                 print("\n===== ATM MENU =====")
                 while True:
